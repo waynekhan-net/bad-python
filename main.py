@@ -1,5 +1,5 @@
-from Crypto.Cipher import DES
+from Crypto.Cipher import AES
 
 
-key = 'spam'
-cipher = DES.new(key, DES.MODE_OFB)  # https://rules.sonarsource.com/python/type/Vulnerability/RSPEC-5547/
+key = b'spam_secret_key!'
+cipher = AES.new(key, AES.MODE_OFB)
